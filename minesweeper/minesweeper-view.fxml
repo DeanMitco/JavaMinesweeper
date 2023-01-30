@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minesweeper.MinesweeperApplication">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="14.0" text="Minesweeper Game">
+         <font>
+            <Font name="Bookman Old Style Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox fx:id="difficultyHbox" layoutY="74.0" prefHeight="100.0" prefWidth="769.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="771.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Difficulty">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="355.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="0.0" prefWidth="594.0">
+                     <children>
+                        <Button fx:id="easyBtn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="101.0" text="Easy">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="115.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="mediumBtn" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="121.0" text="Medium">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="115.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="hardBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="101.0" text="Hard">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="115.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="703.0" layoutY="315.0" prefHeight="30.0" prefWidth="82.0" text="Max Bombs">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fieldBombs" alignment="CENTER" contentDisplay="CENTER" layoutX="719.0" layoutY="340.0" prefHeight="18.0" prefWidth="50.0">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="321.0" prefHeight="18.0" prefWidth="63.0" text="Flags Set">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="flagSeted" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="340.0" prefHeight="18.0" prefWidth="50.0">
+         <font>
+            <Font name="Bookman Old Style" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="flag" fitHeight="63.0" fitWidth="63.0" layoutX="15.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/flag.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="anchorField" layoutX="100.0" layoutY="158.0" prefHeight="400.0" prefWidth="600.0" />
+      <ImageView fx:id="bomb" fitHeight="63.0" fitWidth="63.0" layoutX="713.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/bomb.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="restart" layoutX="343.0" layoutY="558.0" mnemonicParsing="false" onAction="#restart" prefHeight="37.0" prefWidth="114.0" text="Restart">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

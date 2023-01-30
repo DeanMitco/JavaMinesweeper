@@ -1,0 +1,22 @@
+#hardBtn {
+    -fx-background-color: red;
+}
+#mediumBtn {
+    -fx-background-color: blue;
+}
+
+#easyBtn {
+    -fx-background-color: green;
+}
+
+.button {
+    -fx-text-fill: white;
+}
+
+#anchorBackground {
+    -fx-background-color: rgb(241, 250, 238);
+}
+
+#restart {
+    -fx-background-color: black;
+}
